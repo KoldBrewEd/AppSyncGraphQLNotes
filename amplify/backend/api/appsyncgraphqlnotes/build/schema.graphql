@@ -1,0 +1,186 @@
+type Note {
+  id: ID!
+  note: String!
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelNoteConnection {
+  items: [Note]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelNoteFilterInput {
+  id: ModelIDFilterInput
+  note: ModelStringFilterInput
+  and: [ModelNoteFilterInput]
+  or: [ModelNoteFilterInput]
+  not: ModelNoteFilterInput
+}
+
+type Query {
+  getNote(id: ID!): Note
+  listNotes(filter: ModelNoteFilterInput, limit: Int, nextToken: String): ModelNoteConnection
+  searchNotes(filter: SearchableNoteFilterInput, sort: SearchableNoteSortInput, limit: Int, nextToken: Int): SearchableNoteConnection
+}
+
+input CreateNoteInput {
+  id: ID
+  note: String!
+}
+
+input UpdateNoteInput {
+  id: ID!
+  note: String
+}
+
+input DeleteNoteInput {
+  id: ID
+}
+
+type Mutation {
+  createNote(input: CreateNoteInput!): Note
+  updateNote(input: UpdateNoteInput!): Note
+  deleteNote(input: DeleteNoteInput!): Note
+}
+
+type Subscription {
+  onCreateNote: Note @aws_subscribe(mutations: ["createNote"])
+  onUpdateNote: Note @aws_subscribe(mutations: ["updateNote"])
+  onDeleteNote: Note @aws_subscribe(mutations: ["deleteNote"])
+}
+
+input SearchableStringFilterInput {
+  ne: String
+  eq: String
+  match: String
+  matchPhrase: String
+  matchPhrasePrefix: String
+  multiMatch: String
+  exists: Boolean
+  wildcard: String
+  regexp: String
+}
+
+input SearchableIDFilterInput {
+  ne: ID
+  eq: ID
+  match: ID
+  matchPhrase: ID
+  matchPhrasePrefix: ID
+  multiMatch: ID
+  exists: Boolean
+  wildcard: ID
+  regexp: ID
+}
+
+input SearchableIntFilterInput {
+  ne: Int
+  gt: Int
+  lt: Int
+  gte: Int
+  lte: Int
+  eq: Int
+  range: [Int]
+}
+
+input SearchableFloatFilterInput {
+  ne: Float
+  gt: Float
+  lt: Float
+  gte: Float
+  lte: Float
+  eq: Float
+  range: [Float]
+}
+
+input SearchableBooleanFilterInput {
+  eq: Boolean
+  ne: Boolean
+}
+
+input SearchableNoteFilterInput {
+  id: SearchableIDFilterInput
+  note: SearchableStringFilterInput
+  and: [SearchableNoteFilterInput]
+  or: [SearchableNoteFilterInput]
+  not: SearchableNoteFilterInput
+}
+
+enum SearchableSortDirection {
+  asc
+  desc
+}
+
+enum SearchableNoteSortableFields {
+  id
+  note
+}
+
+input SearchableNoteSortInput {
+  field: SearchableNoteSortableFields
+  direction: SearchableSortDirection
+}
+
+type SearchableNoteConnection {
+  items: [Note]
+  nextToken: String
+}

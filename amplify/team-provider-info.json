@@ -1,0 +1,19 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "appsyncgraphqlnotes-20190103095418-authRole",
+            "UnauthRoleArn": "arn:aws:iam::244958302947:role/appsyncgraphqlnotes-20190103095418-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::244958302947:role/appsyncgraphqlnotes-20190103095418-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "appsyncgraphqlnotes-20190103095418-deployment",
+            "UnauthRoleName": "appsyncgraphqlnotes-20190103095418-unauthRole",
+            "StackName": "appsyncgraphqlnotes-20190103095418",
+            "StackId": "arn:aws:cloudformation:us-west-2:244958302947:stack/appsyncgraphqlnotes-20190103095418/56ce1e50-0ee1-11e9-81ea-0257c37ead4a"
+        },
+        "categories": {
+            "auth": {
+                "cognitobf301ea4": {}
+            }
+        }
+    }
+}
