@@ -147,11 +147,11 @@ class App extends Component {
         <br/>
         <div className="container">
           {this.state.displayAdd ?
-            <form>
+            <form onSubmit={this.handleSubmit}>
               <div className="input-group mb-3">
                 <input type="text" className="form-control form-control-lg" placeholder="New Note" aria-label="Note" aria-describedby="basic-addon2" value={this.state.value} onChange={this.handleChange}/>
                 <div className="input-group-append">
-                  <button className="btn btn-primary border border-light" type="button" onClick={this.handleSubmit}>Add Note</button>
+                  <button className="btn btn-primary border border-light" type="submit">Add Note</button>
                   <button className="btn btn-primary border border-light" type="button" onClick={this.handleSearch}>Search</button>
                 </div>
               </div>
