@@ -1,17 +1,26 @@
 {
-	"auth": {
-		"cognitobf301ea4": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation"
-		}
-	},
 	"api": {
-		"appsyncgraphqlnotes": {
+		"amplifyDatasource": {
 			"service": "AppSync",
 			"providerPlugin": "awscloudformation",
 			"output": {
-				"securityType": "AMAZON_COGNITO_USER_POOLS"
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authnotesappd695fd60"
+						}
+					}
+				}
 			}
+		}
+	},
+	"auth": {
+		"notesappd695fd60": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
 		}
 	}
 }
