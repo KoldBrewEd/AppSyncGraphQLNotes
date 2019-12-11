@@ -92,8 +92,13 @@ function App() {
 
   return (
     <div className="App">
-      <header className="jumbotron">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="jumbotron jumbotron-fluid bg-dark">
+        <img
+          src={logo}
+          className="App-logo"
+          alt="logo"
+          style={{ height: "150px" }}
+        />
       </header>
       <div className="container">
         {displayAdd ? (
@@ -158,7 +163,7 @@ function App() {
         {notes.map((item, i) => {
           return (
             <div
-              className="alert alert-warning alert-dismissible show"
+              className="alert alert-warning alert-dismissible text-dark show"
               role="alert"
             >
               <span key={item.i} onClick={() => handleSelect(item)}>
