@@ -146,7 +146,7 @@ function App() {
                 onChange={e => setValue(e.target.value)}
               />
               <div className="input-group-append">
-                <button className="btn btn-primary" type="submit">
+                <button className="btn btn-warning" type="submit">
                   Update Note
                 </button>
               </div>
