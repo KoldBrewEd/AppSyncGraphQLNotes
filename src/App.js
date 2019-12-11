@@ -115,14 +115,14 @@ function App() {
               />
               <div className="input-group-append">
                 <button
-                  className="btn btn-warning border border-light"
+                  className="btn btn-warning border border-light text-white font-weight-bold"
                   type="button"
                   onClick={handleSubmit}
                 >
                   Add Note
                 </button>
                 <button
-                  className="btn btn-warning border border-light"
+                  className="btn btn-warning border border-light text-white font-weight-bold"
                   type="button"
                   onClick={e => {
                     handleSearch(e);
@@ -151,7 +151,10 @@ function App() {
                 onChange={e => setValue(e.target.value)}
               />
               <div className="input-group-append">
-                <button className="btn btn-warning" type="submit">
+                <button
+                  className="btn btn-warning text-white font-weight-bold"
+                  type="submit"
+                >
                   Update Note
                 </button>
               </div>
@@ -187,7 +190,7 @@ function App() {
         })}
         {displaySearch ? (
           <button
-            className="button btn-warning float-right"
+            className="button btn-warning float-right text-white font-weight-bold"
             onClick={() => {
               setDisplaySearch(false);
               listNotes(setNotes);
