@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Amplify from "@aws-amplify/core";
+import Amplify,{ Hub } from "@aws-amplify/core";
 import { DataStore, Predicates } from "@aws-amplify/datastore";
 import { Note } from "./models";
 import { withAuthenticator } from "aws-amplify-react";
@@ -72,6 +72,14 @@ function App() {
 
   useEffect(() => {
     listNotes(setNotes);
+
+    const listener = (data) => {
+      if (data.payload.event === "signOut"){
+        DataStore.clear();
+      }
+    }
+    Hub.listen('auth', listener);
+
     const subscription = DataStore.observe(Note).subscribe(msg => {
       listNotes(setNotes);
     });
