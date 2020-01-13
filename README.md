@@ -1,12 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-# AWS Amplify Multiuser GraphQL CRUD(L) App 
+# AWS Amplify Multiuser GraphQL CRUD(L) App using the Amplify DataStore 
 
 Details and instructions on: https://medium.com/open-graphql/create-a-multiuser-graphql-crud-l-app-in-10-minutes-with-the-new-aws-amplify-cli-and-in-a-few-73aef3d49545
 
-<p align="center">
-  <img src="https://aws-amplify.github.io/docs/images/sync.png">
-</p>
+Previous version (without DataStore): https://medium.com/open-graphql/create-a-multiuser-graphql-crud-l-app-in-10-minutes-with-the-new-aws-amplify-cli-and-in-a-few-73aef3d49545
 
 <p align="center">
   <img src="https://cdn-images-1.medium.com/max/1600/1*ZskKkRiVqgrBZc1foYH-_Q.png">
