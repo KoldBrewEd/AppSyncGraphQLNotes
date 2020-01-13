@@ -71,7 +71,7 @@
 		"apiamplifyDatasource": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/amplify-notesapp-amplify-92725-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"TemplateURL": "https://s3.amazonaws.com/amplify-notesapp-amplify-93132-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"Parameters": {
 					"CreateAPIKey": 0,
 					"AppSyncApiName": "amplifyDatasource",
@@ -79,25 +79,25 @@
 					"DynamoDBEnableServerSideEncryption": "false",
 					"AuthCognitoUserPoolId": {
 						"Fn::GetAtt": [
-							"authnotesappd695fd60",
+							"authnotesapp4a66ea60",
 							"Outputs.UserPoolId"
 						]
 					},
-					"S3DeploymentBucket": "amplify-notesapp-amplify-92725-deployment",
-					"S3DeploymentRootKey": "amplify-appsync-files/f0eb577155e45d963cae34418d9fd5f084dbbf24",
+					"S3DeploymentBucket": "amplify-notesapp-amplify-93132-deployment",
+					"S3DeploymentRootKey": "amplify-appsync-files/527ba7ddceca67a5b628e1092fb3d7a331985b35",
 					"env": "amplify"
 				}
 			}
 		},
-		"authnotesappd695fd60": {
+		"authnotesapp4a66ea60": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/amplify-notesapp-amplify-92725-deployment/amplify-cfn-templates/auth/notesappd695fd60-cloudformation-template.yml",
+				"TemplateURL": "https://s3.amazonaws.com/amplify-notesapp-amplify-93132-deployment/amplify-cfn-templates/auth/notesapp4a66ea60-cloudformation-template.yml",
 				"Parameters": {
-					"identityPoolName": "notesappd695fd60_identitypool_d695fd60",
+					"identityPoolName": "notesapp4a66ea60_identitypool_4a66ea60",
 					"allowUnauthenticatedIdentities": false,
-					"resourceNameTruncated": "notesad695fd60",
-					"userPoolName": "notesappd695fd60_userpool_d695fd60",
+					"resourceNameTruncated": "notesa4a66ea60",
+					"userPoolName": "notesapp4a66ea60_userpool_4a66ea60",
 					"autoVerifiedAttributes": "email",
 					"mfaConfiguration": "OFF",
 					"mfaTypes": "SMS Text Message",
@@ -113,9 +113,9 @@
 					"userpoolClientRefreshTokenValidity": 30,
 					"userpoolClientWriteAttributes": "email",
 					"userpoolClientReadAttributes": "email",
-					"userpoolClientLambdaRole": "notesad695fd60_userpoolclient_lambda_role",
+					"userpoolClientLambdaRole": "notesa4a66ea60_userpoolclient_lambda_role",
 					"userpoolClientSetAttributes": false,
-					"resourceName": "notesappd695fd60",
+					"resourceName": "notesapp4a66ea60",
 					"authSelections": "identityPoolAndUserPool",
 					"authRoleArn": {
 						"Fn::GetAtt": [
@@ -140,7 +140,7 @@
 			"DependsOn": [
 				"AuthRole",
 				"UnauthRole",
-				"authnotesappd695fd60"
+				"authnotesapp4a66ea60"
 			],
 			"Type": "AWS::Lambda::Function",
 			"Properties": {
@@ -199,7 +199,7 @@
 					}
 				},
 				"Handler": "index.handler",
-				"Runtime": "nodejs8.10",
+				"Runtime": "nodejs10.x",
 				"Timeout": "300",
 				"Role": {
 					"Fn::GetAtt": [
@@ -223,7 +223,7 @@
 				},
 				"idpId": {
 					"Fn::GetAtt": [
-						"authnotesappd695fd60",
+						"authnotesapp4a66ea60",
 						"Outputs.IdentityPoolId"
 					]
 				},

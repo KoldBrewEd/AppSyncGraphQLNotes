@@ -7,3 +7,6 @@ awsconfiguration.json
 
 node_modules/
 .DS_Store
+amplify/.DS_Store
+amplify/backend/.DS_Store
+amplify/backend/.DS_Store

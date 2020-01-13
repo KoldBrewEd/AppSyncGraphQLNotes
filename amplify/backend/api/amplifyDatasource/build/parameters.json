@@ -5,10 +5,10 @@
     "DynamoDBEnableServerSideEncryption": "false",
     "AuthCognitoUserPoolId": {
         "Fn::GetAtt": [
-            "authnotesappd695fd60",
+            "authnotesapp4a66ea60",
             "Outputs.UserPoolId"
         ]
     },
-    "S3DeploymentBucket": "amplify-notesapp-amplify-92725-deployment",
-    "S3DeploymentRootKey": "amplify-appsync-files/f0eb577155e45d963cae34418d9fd5f084dbbf24"
+    "S3DeploymentBucket": "amplify-notesapp-amplify-93132-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/527ba7ddceca67a5b628e1092fb3d7a331985b35"
 }

@@ -9,7 +9,7 @@
 					"defaultAuthentication": {
 						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
 						"userPoolConfig": {
-							"userPoolId": "authnotesappd695fd60"
+							"userPoolId": "authnotesapp4a66ea60"
 						}
 					}
 				}
@@ -17,7 +17,7 @@
 		}
 	},
 	"auth": {
-		"notesappd695fd60": {
+		"notesapp4a66ea60": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": []
