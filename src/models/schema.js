@@ -7,11 +7,7 @@ export const schema = {
             "attributes": [
                 {
                     "type": "model",
-                    "properties": {
-                        "subscriptions": {
-                            "level": "public"
-                        }
-                    }
+                    "properties": {}
                 }
             ],
             "fields": {
