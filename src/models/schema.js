@@ -40,12 +40,19 @@ export const schema = {
                     "name": "note",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "owner": {
+                    "name": "owner",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
                     "attributes": []
                 }
             }
         }
     },
     "enums": {},
-    "version": "2e816de7475cd3dd4df991041e7a03a1"
+    "version": "456329cc9479bcfbe489218930ca26eb"
 };
