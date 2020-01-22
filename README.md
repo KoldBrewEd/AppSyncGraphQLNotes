@@ -1,12 +1,12 @@
 
 # AWS Amplify Multiuser GraphQL CRUD(L) App using the Amplify DataStore 
 
-Details and instructions on: https://medium.com/open-graphql/create-a-multiuser-graphql-crud-l-app-in-10-minutes-with-the-new-aws-amplify-cli-and-in-a-few-73aef3d49545
+Details and instructions on: https://medium.com/open-graphql/create-a-multiuser-graphql-crud-l-app-in-5-minutes-with-the-amplify-datastore-902764f27404
 
 Previous version (without DataStore): https://medium.com/open-graphql/create-a-multiuser-graphql-crud-l-app-in-10-minutes-with-the-new-aws-amplify-cli-and-in-a-few-73aef3d49545
 
 <p align="center">
-  <img src="https://cdn-images-1.medium.com/max/1600/1*jhPN_D1UzBBnG-FuoxeHIA.gif">
+  <img src="https://miro.medium.com/max/640/1*jhPN_D1UzBBnG-FuoxeHIA.gif">
 </p>
 
 ## One-Click Deploy with the Amplify Console
